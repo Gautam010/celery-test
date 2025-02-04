@@ -26,8 +26,6 @@ SECRET_KEY = "django-insecure-7v!pql3!)&oa=+g-4y_h)j#prkiq_wwr3j_eu+o^in2563(rtm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -113,7 +111,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -125,3 +122,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CELERY_BROKER_URL = config('CELERY_BROKER_URL')
+EMAIL_HOST = "smtp.fastmail.com"
+EMAIL_PORT = 465
+EMAIL_USE_TLS=False
+EMAIL_USE_SSL=True
